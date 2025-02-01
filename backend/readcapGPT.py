@@ -1,5 +1,8 @@
-import json
+import os  
+import base64
+from openai import AzureOpenAI  
 import openai
+import json
 
 client = AzureOpenAI(  
     azure_endpoint=endpoint,  
@@ -20,13 +23,12 @@ def ai_respond(messages):
         stream=False
     )
     print(completion.to_json())  
+with open('messages.json', 'r') as file:
+        messages_data = json.load(file)
 
-texts = [
-    "Hey, how are you?",
-    "I'm good, thanks! How about you?",
-    "Doing well, just working on a project.",
-    "That's great! What project are you working on?"
-]
+texts = "\n".join(
+        f"{msg['name']} ({msg['time']}): {msg['message_content']}" for msg in messages_data
+    )
 def summarize_chat():
     user_input = input()
     chat_prompt = [
