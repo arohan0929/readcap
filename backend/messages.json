@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Alice",
+        "message_content": "Hey everyone! How's it going?",
+        "message_type": "text",
+        "time": "2023-10-01T10:00:00Z"
+    },
+    {
+        "name": "Bob",
+        "message_content": "Hi Alice! I'm doing well, just got back from a run.",
+        "message_type": "text",
+        "time": "2023-10-01T10:01:15Z"
+    },
+    {
+        "name": "Charlie",
+        "message_content": "Good morning! I just finished my coffee.",
+        "message_type": "text",
+        "time": "2023-10-01T10:02:30Z"
+    },
+    {
+        "name": "Alice",
+        "message_content": "Nice! I just saw this amazing sunrise. Check it out!",
+        "message_type": "image",
+        "time": "2023-10-01T10:03:45Z"
+    },
+    {
+        "name": "Bob",
+        "message_content": "Wow, that's beautiful! Where did you take it?",
+        "message_type": "text",
+        "time": "2023-10-01T10:04:00Z"
+    },
+    {
+        "name": "Alice",
+        "message_content": "From my balcony. The view is amazing in the mornings.",
+        "message_type": "text",
+        "time": "2023-10-01T10:05:15Z"
+    },
+    {
+        "name": "Charlie",
+        "message_content": "I wish I could see it in person. Here's a video from my walk yesterday.",
+        "message_type": "video",
+        "time": "2023-10-01T10:06:30Z"
+    },
+    {
+        "name": "Bob",
+        "message_content": "Looks like a peaceful place. Thanks for sharing!",
+        "message_type": "text",
+        "time": "2023-10-01T10:07:45Z"
+    },
+    {
+        "name": "Alice",
+        "message_content": "I'll send a voice message later with more details.",
+        "message_type": "text",
+        "time": "2023-10-01T10:08:00Z"
+    },
+    {
+        "name": "Alice",
+        "message_content": "voice_message_12345.mp3",
+        "message_type": "voice",
+        "time": "2023-10-01T10:09:00Z"
+    }
+]
