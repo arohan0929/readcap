@@ -11,11 +11,8 @@ def hello_world():
     send_message_DB(message)
 
     # if messages contains @readcap get db
-
-    old_messages = get_messages()
-
-    # new message
-    # send back as a response to the api 
-
-    return 'Hello from Flask!'
-
+    if message.contains('@readcap'):
+        ai_response = read_chat(get_messages(), message)
+        return ai_response
+    else:
+        return "nothing"

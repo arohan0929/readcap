@@ -1,6 +1,8 @@
 from datetime import datetime, timezone
 from pymongo import MongoClient
 
+MONGO_URI = "mongodb+srv://mayankgoel214:qXtFErtjLRcsK18Q@readcap.rwhg1.mongodb.net/?retryWrites=true&w=majority&appName=Readcap"
+
 client = MongoClient(MONGO_URI)
 
 database = client["readcap"]
@@ -18,4 +20,4 @@ def get_messages():
     return messages
 
 
-send_message_DB("hi", "mayank")
+print (get_messages())
