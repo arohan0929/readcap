@@ -3,7 +3,15 @@ import base64
 from openai import AzureOpenAI  
 import openai
 import json
+from dotenv import load_dotenv
 
+load_dotenv('readcap.env')
+
+endpoint = os.getenv("ENDPOINT_URL")  
+deployment = os.getenv("DEPLOYMENT_NAME")  
+subscription_key = os.getenv("AZURE_OPENAI_API_KEY")  
+
+# Initialize Azure OpenAI Service client with key-based authentication    
 client = AzureOpenAI(  
     azure_endpoint=endpoint,  
     api_key=subscription_key,  
@@ -34,7 +42,8 @@ def summarize_chat():
     chat_prompt = [
         {
             "role": "system",
-            "content": "You are the best assistant that summarizes and analyzes chat messages in a group chat."
+            "content": "You are the best assistant that summarizes and analyzes chat messages in a group chat. Here are a few features I want you to implement"
+                       "Event: Read the chats and search if an event place and time has been decided. Only do this if there is discussion of an event or meetup. If so put it in this format - {Event Location and time:(the location and time); people confirmed:(usernames of the people who have said yes);"
         },
         {
             "role": "user",
