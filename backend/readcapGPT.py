@@ -55,3 +55,7 @@ def summarize_chat():
     ai_respond(messages)
     
 summarize_chat()
+
+
+def start_ai(old_messages, message_prompt):
+    return
